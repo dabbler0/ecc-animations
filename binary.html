@@ -1,0 +1,21 @@
+<html>
+<head>
+</head>
+<body>
+  <canvas width='500' height='500'></canvas>
+  <script src="drawtree.js"></script>
+  <script>
+    var canvas = document.querySelector('canvas'),
+        ctx = canvas.getContext('2d'), fn;
+
+    window.addEventListener("resize", fn = function() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+
+    fn();
+
+    binaryanim(ctx, 5);
+  </script>
+</body>
+</html>
